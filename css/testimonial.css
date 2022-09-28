@@ -1,0 +1,50 @@
+
+.testimonials{
+    
+    padding-top: 3rem;
+    margin:3rem auto 1rem;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr)) ;
+    grid-gap:2rem;
+    justify-content: center;
+
+}
+.testimonials .test-card{
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+.testimonials .test-card .layer{
+    position: absolute;
+    
+    top: calc(100% - 2px);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+    background:linear-gradient(#03a9fa,white);
+    transition: 0.5s;
+}
+.testimonials .test-card:hover .layer
+{
+    top:0;
+}
+.testimonials.test-card .image{
+    display: block;
+}
+
+
+.testimonials .test-card .content{
+    z-index: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    justify-content: center;
+
+}
+

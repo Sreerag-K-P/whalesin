@@ -1,0 +1,19 @@
+.header-aria{
+    
+    /* display: flex; */
+    
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(255, 255, 255,1);
+    overflow: hidden;
+    position:fixed;
+    padding: 0 1rem;
+}
+
+.even-columns h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.opening h2{
+    text-decoration: underline;
+}

@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    background-color: #ffff;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fcfcfc;
+    z-index: 999;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1110px ;
+    height: 4rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+.toggle__menu,
+.close__menu{
+   display: none;
+}
+
+.nav__list{
+    display: flex;
+}
+
+.nav__item{
+    margin: 0 1.5rem;
+    padding: 1.4rem 0;
+}
+.nav__link{
+    font-weight: 500;
+    color: #544756;
+}
+.nav__link:hover{
+    
+    color:skyblue;
+}
+.dropdown__link{
+    display: flex;
+    align-items: center;
+}
+.dropdown__icon{
+    font-size: 1rem;
+}
+
+.megamenu{
+    position: absolute;
+    width: 100%; 
+    top:4rem;
+    left: 0;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 23px 23px -21px rgba(0,0,0,0.25);
+    z-index: -99;
+
+    visibility: hidden; 
+     opacity: 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.megamenu__item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.header__megamenu {
+    font-weight: 600;
+    color: #a8a1b5;
+    margin-bottom: 1rem;
+}
+
+.menu__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #efeef1;
+    margin-right: 0.5rem;
+
+}
+
+.menu__icon  i {
+  line-height: 32px;
+  font-size: 22px;
+  color: skyblue;
+}
+
+.megamenu__link a {
+    font-weight: 500;
+    color: #000;
+}
+
+.megamenu__link a:hover {
+    font-weight: 500;
+    color: skyblue;
+}
+
+.megamenu__link p{
+    font-size: 0.6875rem;
+    font-weight: 400;
+    color: #a8a1b5;
+}
+.dropdown:hover .megamenu{
+    color: skyblue;
+    visibility:visible;
+    transition: all 0.3s ease;
+    opacity: 1;
+
+}
+
+.nav__item:hover .dropdown__icon {
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 992px) {
+    .megamenu {
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .megamenu {
+        flex-direction: column;
+        position: static;
+        box-shadow: none;
+        border-radius:0 ;
+        height: 0;
+        max-width: 350px;
+        overflow: hidden;
+    }
+    .dropdown:hover .megamenu{
+        height: 100%;
+    }
+    .nav__list{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        max-width: 350px;
+        top: 0;
+        background-color: #fff;
+        flex-direction: column;
+        overflow-x: hidden;
+        display: block;
+        transition: 0.3s;
+    }
+    .toggle__menu,
+    .close__menu {
+        display: block;
+    }
+    .toggle__menu i :hover {
+        color: skyblue;
+    }
+    .close__menu{
+        margin: 1rem 1rem 1rem auto;
+        background-color: skyblue;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+    }
+    .close__menu:hover{
+       color: blue;
+    }
+    .close__menu i{
+        line-height: 32px;
+        color: #fff;
+        font-size: 22px;
+    }
+    .show__menu {
+        left: 0;
+    }  
+    
+}
+
+
+/* maninbody */
+
+/* .web{
+    padding-top: 6rem;
+    font-weight: 900;
+    height: 40vh;
+} */
+.web h1{
+    
+    font-size: clamp(2rem, 2.5vw, 1.5rem);
+    font-weight: bolder;
+    color: #fff;
+}
+#bnrimg{
+    padding-top:5rem;
+}
+.support{
+    padding:3rem 0;
+    justify-content: center;
+    
+    justify-content: space-between;
+    
+    
+    
+}
+.support p{
+    padding: 0 1rem;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.support .button{
+    margin: 1.2rem;
+    letter-spacing: 0.2rem;
+    
+}
+  
